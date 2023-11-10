@@ -1,0 +1,8 @@
+.chatBox {
+    height: 500px;
+    width: 60%;
+    background-color: #E0E9E9;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
