@@ -4,7 +4,7 @@ function messages({ messages }) {
     return (
         <div className='messages-List'>
             {messages.map((item) =>
-                <Message id={item.id} body={item.body} isPeer={item.isPeer} />)}
+                <Message key={item.id} id={item.id} body={item.body} isPeer={item.isPeer} />)}
         </div>
     )
 }
