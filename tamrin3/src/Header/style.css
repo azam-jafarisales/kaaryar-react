@@ -1,0 +1,20 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: azure;
+    padding: 10px 0;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    height: 20%;
+}
+
+.header_row1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_row2{
+    display: flex;
+    justify-content: space-around;
+}
