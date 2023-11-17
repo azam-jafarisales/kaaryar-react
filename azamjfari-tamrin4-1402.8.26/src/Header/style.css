@@ -1,0 +1,36 @@
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: azure;
+    border-top-right-radius: 24px;
+    border-top-left-radius: 24px;
+    height: 20%;
+}
+
+.header_row1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.header_row2{
+    display: flex;
+}
+
+.header_row2_column{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header_row2_column_3{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header_row2_column_4{
+    display: flex;
+    justify-content: flex-start;
+}
+

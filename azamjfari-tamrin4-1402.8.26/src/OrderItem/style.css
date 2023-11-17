@@ -1,0 +1,24 @@
+ .order {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+ }
+
+ .order-div-h3{
+   display: flex;
+   justify-content: flex-end;
+ }
+
+ .order-div {
+    width: 33.333%;
+    display: flex;
+    justify-content: center;
+ }
+
+ .order-div-3{
+   justify-content: flex-end;
+ }
+
+ .order-div-4{
+   justify-content: flex-start;
+ }
