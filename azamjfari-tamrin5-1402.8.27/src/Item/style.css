@@ -6,7 +6,7 @@
     transition-duration: 0.5s;
 }
 
-.text{
+.item_p{
     color: black;
     transition-duration: 0.3s;
     max-width: 50%;
@@ -20,17 +20,16 @@
     height: 24px;
     border-radius: 50%;
     background-color: #F0F0F0;
-    /* outline: #F0F0F0; */
-    border-color: #F0F0F0;
     cursor: pointer;
     transition-duration: 0.5s;
+    border: none;
 }
 
 .item:hover{
     background-color: #F84546;
 }
 
-.item:hover .text{
+.item:hover .item_p{
     color: white;
 }
 
