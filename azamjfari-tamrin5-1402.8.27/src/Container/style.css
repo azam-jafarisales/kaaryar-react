@@ -1,0 +1,11 @@
+.container{
+    width: 100%;
+    max-width: 450px;
+    background-color: rgb(255, 255, 255);
+    min-height: 500px;
+    max-height: 800px;
+    box-shadow: 0 32px 50px 12px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}

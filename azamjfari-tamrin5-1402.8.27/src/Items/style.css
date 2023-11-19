@@ -1,0 +1,6 @@
+.items{
+    padding: 16px;
+    overflow-y: scroll;
+    flex: 1;
+    box-sizing: border-box;
+}
