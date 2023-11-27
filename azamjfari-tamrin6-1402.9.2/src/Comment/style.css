@@ -1,0 +1,35 @@
+.comment {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    direction: rtl;
+}
+
+.comment_body{
+    background-color:rgb(250, 250, 243);
+    border-radius: 5px;
+    padding: 16px;
+}
+
+.comment_header {
+    display: flex;
+    justify-content: space-between;
+    direction: ltr;
+    border-bottom: 2px solid rgb(238, 238, 238);
+    padding-bottom: 8px;
+}
+
+.comment_text{
+    padding-top: 8px;
+    font-size: 18px;
+    color: rgb(158, 185, 220);
+}
+
+.comment_header_span{
+    color: rgb(199 , 225, 239);
+}
+
+.comment_header_reply_span , .comment_header_name_span{
+    color: rgb(91, 163, 95);
+}
