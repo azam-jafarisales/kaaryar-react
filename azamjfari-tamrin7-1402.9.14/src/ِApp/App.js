@@ -1,4 +1,4 @@
-import Buttons from './components/Buttons/index.jsx';
+import Buttons from '../components/Buttons/index.jsx';
 import './App.css';
 
 function App() {

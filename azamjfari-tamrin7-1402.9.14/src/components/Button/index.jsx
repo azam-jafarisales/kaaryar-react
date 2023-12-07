@@ -1,9 +1,8 @@
 
 import './style.css'
 function Button({ as:As="button", variant, look, size, disabled, href, type, target, children, className , onClick}) {
-
     return (
-        <As className={`btn btn_${look}_${variant}_${size}`} href={href} target={target} type={type} onClick={onClick} disabled={disabled}>{children}</As>
+        <As className={`btn btn_${look}_${variant}_${size}   ${className}` } href={href} target={target} type={type} onClick={onClick} disabled={disabled}>{children}</As>
     )
 }
 
