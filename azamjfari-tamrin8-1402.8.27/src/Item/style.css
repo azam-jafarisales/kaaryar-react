@@ -1,0 +1,39 @@
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 8px;
+    min-height: 32px;
+    transition-duration: 0.5s;
+}
+
+.item_p{
+    color: black;
+    transition-duration: 0.3s;
+    max-width: 50%;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
+
+.item-close-button{
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background-color: #F0F0F0;
+    cursor: pointer;
+    transition-duration: 0.5s;
+    border: none;
+}
+
+.item:hover{
+    background-color: #F84546;
+}
+
+.item:hover .item_p{
+    color: white;
+}
+
+.item:hover .item-close-button{
+   background-color: white;
+   color: #F84546;
+}
