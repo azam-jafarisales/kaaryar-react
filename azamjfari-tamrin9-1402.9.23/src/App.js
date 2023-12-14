@@ -16,11 +16,10 @@ function App() {
   const [confirmPass, setConfirmPass] = useState("")
   const [confirmPassError, setConfirmPassError] = useState("");
   const [city, setCity] = useState("");
-  // const [cityError, setCityErropr] = useState("")
   const [gender, setGender] = useState("");
   const [genderError, setGenderError] = useState('');
-  const [skill , setSkill]= useState("");
-  const [skillError , setSkillError]= useState("")
+  const [skill, setSkill] = useState("");
+  const [skillError, setSkillError] = useState("")
 
 
   function handleSubmit(event) {
@@ -33,7 +32,7 @@ function App() {
     let newPassError = "";
     let newConfirmPassError = "";
     let newGenderError = "";
-    let newSkillsError ="";
+    let newSkillsError = "";
     if (name.length === 0 || !name) {
       newNameError = "نام اجباریست"
 
@@ -69,11 +68,11 @@ function App() {
       newGenderError = "لطفا یک مورد را انتخاب کنید"
     }
 
-    if(skill===""){
-      newSkillsError ="لطفا یک مورد را انتخاب کنید"
+    if (skill === "") {
+      newSkillsError = "لطفا یک مورد را انتخاب کنید"
     }
 
-    if (newEmailError || newNameError || newPassError || newConfirmPassError || newGenderError || newSkillsError ) {
+    if (newEmailError || newNameError || newPassError || newConfirmPassError || newGenderError || newSkillsError) {
       setEmailError(newEmailError);
       setNameError(newNameError);
       setPassError(newPassError);
@@ -89,6 +88,8 @@ function App() {
     setGenderError("");
     setConfirmPassError("")
 
+    console.log("Register Successful")
+
   }
 
   function handleSets() {
@@ -102,48 +103,46 @@ function App() {
     setConfirmPass("");
     setConfirmPassError("")
     setPass("");
-    setPassError("")
+    setPassError("");
+    setSkill("");
+    setSkillError("")
   }
 
 
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className='form'>
       <p>{gender}</p>
 
-      <label>
+      <label htmlFor={name}>
         <h2>name and last name</h2>
-        <input type='text' placeholder='name & lastName' value={name} onChange={(e)=>{setName(e.target.value)}} required />
-        <p>{nameError}</p>
+        <input type='text' placeholder='name & lastName' value={name} onChange={(e) => { setName((e.target.value).trim()) }} required />
+        <p className='error'>{nameError}</p>
       </label>
-      <hr />
-      <label>
+      <label htmlFor={email}>
         <h2>Enter Email</h2>
-        <input type='email' placeholder='Email ...' value={email} onChange={(e)=>{setEmail(e.target.value)}} />
-        <p>{emailError}</p>
+        <input type='email' placeholder='Email ...' value={email} onChange={(e) => { setEmail((e.target.value).trim()) }} required={true} />
+        <p className='error'>{emailError}</p>
       </label>
-      <hr />
-      <label>
+      <label htmlFor={pass}>
         <h2>password</h2>
-        <input type='password' placeholder='password' value={pass} onChange={(e)=>{setPass(e.target.value)}} />
-        <p>{passError}</p>
+        <input type='password' placeholder='password' value={pass} onChange={(e) => { setPass(e.target.value) }}  required={true} />
+        <p className='error'>{passError}</p>
       </label>
 
-      <hr />
-      <label>
+      <label htmlFor={confirmPass}>
         <h2>confirm password</h2>
-        <input type='password' placeholder='confirm password' value={confirmPass} onChange={(e) => { setConfirmPass(e.target.value) }} />
-        <p>{confirmPassError}</p>
+        <input type='password' placeholder='confirm password' value={confirmPass} onChange={(e) => { setConfirmPass(e.target.value) }} required={true}/>
+        <p className='error'>{confirmPassError}</p>
       </label>
 
-      <label>
+      <label htmlFor={city}>
         <h2>city</h2>
-        <select value={city} onChange={(e) => setCity(e.target.value)} >
+        <select value={city} onChange={(e) => setCity(e.target.value)} required={true} >
           <option value="">انتحاب کنید</option>
           {cities.map((city) => (<option>{city}</option>))}
         </select>
       </label>
-      <hr />
       <h2>Gender</h2>
       <label htmlFor='male'>
         <input type='radio' value="male" name='gender' onChange={(e) => setGender(e.target.value)} />مرد
@@ -155,14 +154,12 @@ function App() {
       <label htmlFor='prefer not to say'>
         <input type='radio' value=" prefer not to say" name='gender' onChange={(e) => setGender(e.target.value)} /> نامشخص
       </label>
-      <p>{genderError}</p>
-      <hr />
+      <p className='error'>{genderError}</p>
       <label>
         <h2>skills</h2>
-        {skills.map((item)=>(<label htmlFor={item}><input type='checkbox' value={item} onChange={(e)=>setSkill(e.target.checked)}/>{item}</label>))}
-       <p>{String(skillError)}</p>
+        {skills.map((item) => (<label htmlFor={item}><input type='checkbox' value={item} onChange={(e) => setSkill(e.target.checked)} />{item}</label>))}
+        <p className='error'>{String(skillError)}</p>
       </label>
-      <hr />
       <button type='submit' onClick={handleSubmit} >submit</button>
       <button type='reset' onClick={handleSets}>reset</button>
     </form>
