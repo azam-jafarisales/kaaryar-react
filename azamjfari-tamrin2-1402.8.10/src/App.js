@@ -6,9 +6,10 @@ import formData from './form.json';
 function renderUser(client) {
   if (client.gender === "Male") {
     return (<div className='card'>
-      <p className='blue'>{client.first_name}</p>
+      <div className='text'><p className='blue'>{client.first_name}</p>
       <p>{client.last_name}</p>
-      <p>{client.gender}</p>
+      <p>{client.gender}</p></div>
+      <img src={client.avatar} className='avatar' alt='' />
     </div>)
   } else {
     return (<div className='card'>

@@ -3,7 +3,6 @@
     overflow-y: scroll;
     flex: 1;
     box-sizing: border-box;
-
 }
 
 ::-webkit-scrollbar {
