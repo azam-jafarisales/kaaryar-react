@@ -13,7 +13,7 @@ function Container() {
     }, [items]);
 
     function handleNewTask() {
-        if (inpValue !== "") {
+        if (inpValue.trim() !== "") {
             if (inpValue !== '') {
                 setItems(previouseItems => [...previouseItems, { value: inpValue, id: new Date().getTime() }]);
                 setInpValue('');
