@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App/index.js';
 import reportWebVitals from './reportWebVitals';
+import "./Fonts/fonts.css"
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
